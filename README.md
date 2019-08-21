@@ -2,18 +2,18 @@
   This post is intended to give a brief explanation of what are the encryption types, how they work and examples.
 
 
-# Types of Encryption
+## Types of Encryption
   There are two types of encryption `symmetric` and `asymmetric`. The name derives from whether or not the same key is used for excryption or decryption
   
   
-## Symmetric Encryption
+### Symmetric Encryption
   * In this type of encryption there is only one key (Private key), and all sides communicating use the same key for encryption and decryption. 
   * The main problem here is that the key needs to be shared in a very secure way, otherwise whoever intercepts the key will be able to decrypt data
   * The most widely used symmetric algorithms are AES-128, AES-192, and AES-256.
   * Examples of Symetric Encryption:
     * 
     
-## Asymetric Encryption
+### Asymetric Encryption
   * Also known as public key encryption. There are two keys, where public key is used encrypt data and only the private key is able to decrypt it
   * The main problem for this type of encryption is the time/processing it takes to deal with enycrption/decryption, it is a lot higher than on symetric encryption
   * The most known asymetric key encryption algorithm are EIGamal, RSA, DSA, Elliptic curve techniques, PKCS.
@@ -22,7 +22,7 @@
     * SSH
 
 
-# Asymetric Encryption in Digital Certificates
+## Asymetric Encryption in Digital Certificates
   * In cases of accessing secure web pages, a certificate is issued by a Certificate Authority (CA). 
   * A certificate is a package of information that identifies the server. They most commonly contain the public key, identity owner and CA.
   * The communication between client and server is similar to this:
@@ -43,7 +43,7 @@
 - Ethernet
 ```
 
-## CA
+### CA
   * There are two types of certificate authorities (CAs)
     * Root CAs and Intermediate CAs
   * There are some layers of CA inside the certificate file. Ergo, if the user's browser cannot trust the first CA, the upper layer of CA on a certificate is tried to be validated by the same, until it reaches CA Root (if needed)
@@ -52,16 +52,16 @@
 
 
 
-# TLS and SSL
+## TLS and SSL
   * They are both cryptographic *PROTOCOLS* that provides authentication and data encryption between server, machines, applications over network etc
   * They were originally developed by Netscape
   * You may be able to use both protocols with a web certificate as the protocol is not defined by the CA or the certificate itself, it is defined by the server configuration (whoever is hosting the site)
 
-## SSL
+### SSL
   * SSL means Secure Socket Layers
   * SSL have been deprecated by IETF, on its last version - SSL 3.0 -, in 2015.(Internet Engineering Task Force)
 
-## TLS
+### TLS
   * TLS means Transport Layer Security
   * Is an upgrade of SSL protocol (3.0)
   * Its most updated version is `1.3`
