@@ -24,10 +24,10 @@
 
 # Asymetric Encryption in Digital Certificates
   * In cases of accessing secure web pages, a certificate is issued by a Certificate Authority (CA). 
-  * A certificate is a package of information that identifies a user (client) and a server. They most commonly contain the public key, identity owner and CA.
+  * A certificate is a package of information that identifies the server. They most commonly contain the public key, identity owner and CA.
   * The communication between client and server is similar to this:
     * Client messages server to initiate communication
-    * Server sends back an encrypted public key/certificate
+    * Server sends back a signed certificate
     * Client checks the certificate
       * On their native browser they have a list of CA's and this is how the client test if the certificate is OK
     * If all is good with certificate, client creates and sends an encrypted key to the server
@@ -44,7 +44,6 @@
 ```
 
 ## CA
-  * In order for an TLS(SSL) certificate to be trusted, that certificate must have been issued by a CA
   * There are two types of certificate authorities (CAs)
     * Root CAs and Intermediate CAs
   * There are some layers of CA inside the certificate file. Ergo, if the user's browser cannot trust the first CA, the upper layer of CA on a certificate is tried to be validated by the same, until it reaches CA Root (if needed)
@@ -55,11 +54,11 @@
 
 # TLS and SSL
   * They are both cryptographic *PROTOCOLS* that provides authentication and data encryption between server, machines, applications over network etc
+  * They were originally developed by Netscape
   * You may be able to use both protocols with a web certificate as the protocol is not defined by the CA or the certificate itself, it is defined by the server configuration (whoever is hosting the site)
 
 ## SSL
   * SSL means Secure Socket Layers
-  * SSL was originally developed by Netscape
   * SSL have been deprecated by IETF, on its last version - SSL 3.0 -, in 2015.(Internet Engineering Task Force)
 
 ## TLS
